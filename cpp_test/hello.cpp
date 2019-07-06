@@ -1,4 +1,4 @@
-#include <cassert>
+#include <assert.h>
 #include <iostream>
 #include <string>
 #include <vector>
@@ -31,14 +31,15 @@ void case1()
 
 //////////////////////////////////////////
 
-class self_shared:
-    public enable_shared_from_this<self_shared>
+class self_shared : public enable_shared_from_this<self_shared>
 {
 public:
-    self_shared(int n):x(n){}
+    self_shared(int n) : x(n) {}
     int x;
     void print()
-    {   std::cout << "self_shared:" << x << std::endl;    }
+    {
+        std::cout << "self_shared:" << x << std::endl;
+    }
 };
 
 void case2()
@@ -58,7 +59,9 @@ class node
 {
 public:
     ~node()
-    {     std::cout << "deleted" << std::endl;}
+    {
+        std::cout << "deleted" << std::endl;
+    }
 
     typedef weak_ptr<node> ptr_type;
     //typedef shared_ptr<node> ptr_type;
@@ -76,50 +79,18 @@ void case3()
     assert(p1.use_count() == 1);
     assert(p2.use_count() == 1);
 
-    if(!p1->next.expired())
+    if (!p1->next.expired())
     {
         auto p3 = p1->next.lock();
     }
 }
 
-//////////////////////////////////////////
-
-class raw_shared : public enable_shared_from_raw
-{
-public:
-    raw_shared()
-    {   std::cout << "raw_shared ctor" << std::endl;    }
-    ~raw_shared()
-    {   std::cout << "raw_shared dtor" << std::endl;    }
-};
-
-void case4()
-{
-    raw_shared x;
-    assert(weak_from_raw(&x).use_count() == 1);
-    auto px = shared_from_raw(&x);
-    assert(px.use_count() == 2);
-
-    auto p = new raw_shared;
-
-    auto wp = weak_from_raw(p);
-    assert(wp.use_count() == 1);
-
-    decltype(shared_from_raw(p)) spx(p);
-
-    auto sp = shared_from_raw(p);
-    //std::cout << sp.use_count() << std::endl;
-    assert(sp.use_count() == 2);
-
-    //decltype(sp) spx(p);
-
-    auto sp2 = sp;
-    auto wp2 = weak_from_raw(p);
-    assert(wp2.use_count() == 3);
-}
 int main()
 {
-    cout<<"hello"<<endl;
+    case1();
+    case2();
+    case3();
+    cout << "hello" << endl;
     system("pause");
     return 0;
 }
