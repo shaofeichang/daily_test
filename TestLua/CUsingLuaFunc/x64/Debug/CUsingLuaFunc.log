@@ -1,13 +1,14 @@
-﻿生成启动时间为 2019/7/6 16:06:53。
-     1>项目“E:\gitClone\daily_test\TestLua\CUsingLuaFunc\CUsingLuaFunc.vcxproj”在节点 2 上(build 个目标)。
-     1>InitializeBuildStatus:
+﻿生成启动时间为 2019/7/13 21:32:35。
+     1>项目“E:\gitClone\daily_test\TestLua\CUsingLuaFunc\CUsingLuaFunc.vcxproj”在节点 2 上(rebuild 个目标)。
+     1>_PrepareForClean:
+         正在删除文件“x64\Debug\CUsingLuaFunc.lastbuildstate”。
+       InitializeBuildStatus:
          正在创建“x64\Debug\CUsingLuaFunc.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /Od /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc100.pdb" /Gd /TC /errorReport:prompt main.c
          main.c
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"E:\gitClone\daily_test\TestLua\CUsingLuaFunc\Debug\CUsingLuaFunc.exe" /NOLOGO luad.lib opencv_world341.lib pthreadVC2.lib opencv_world341.lib pthreadVC2.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"x64\Debug\CUsingLuaFunc.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\gitClone\daily_test\TestLua\CUsingLuaFunc\Debug\CUsingLuaFunc.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\gitClone\daily_test\TestLua\CUsingLuaFunc\Debug\CUsingLuaFunc.lib" /MACHINE:X64 x64\Debug\main.obj
-         LINK : 没有找到 E:\gitClone\daily_test\TestLua\CUsingLuaFunc\Debug\CUsingLuaFunc.exe 或上一个增量链接没有生成它；正在执行完全链接
      1>luad.lib(lapi.obj) : warning LNK4099: 未找到 PDB“vc100.pdb”(使用“luad.lib(lapi.obj)”或在“E:\gitClone\daily_test\TestLua\CUsingLuaFunc\Debug\vc100.pdb”中寻找)；正在链接对象，如同没有调试信息一样
      1>luad.lib(lauxlib.obj) : warning LNK4099: 未找到 PDB“vc100.pdb”(使用“luad.lib(lauxlib.obj)”或在“E:\gitClone\daily_test\TestLua\CUsingLuaFunc\Debug\vc100.pdb”中寻找)；正在链接对象，如同没有调试信息一样
      1>luad.lib(lbaselib.obj) : warning LNK4099: 未找到 PDB“vc100.pdb”(使用“luad.lib(lbaselib.obj)”或在“E:\gitClone\daily_test\TestLua\CUsingLuaFunc\Debug\vc100.pdb”中寻找)；正在链接对象，如同没有调试信息一样
@@ -46,8 +47,8 @@
        FinalizeBuildStatus:
          正在删除文件“x64\Debug\CUsingLuaFunc.unsuccessfulbuild”。
          正在对“x64\Debug\CUsingLuaFunc.lastbuildstate”执行 Touch 任务。
-     1>已完成生成项目“E:\gitClone\daily_test\TestLua\CUsingLuaFunc\CUsingLuaFunc.vcxproj”(build 个目标)的操作。
+     1>已完成生成项目“E:\gitClone\daily_test\TestLua\CUsingLuaFunc\CUsingLuaFunc.vcxproj”(rebuild 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:01.37
+已用时间 00:00:01.47
