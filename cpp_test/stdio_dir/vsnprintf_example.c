@@ -1,29 +1,29 @@
 #include <stdio.h>
 #include <stdarg.h>
 
-void PrintFError ( const char * format, ... )
+void PrintFError(const char *format, ...)
 {
   char buffer[256];
   va_list args;
-  va_start (args, format);
-  vsnprintf (buffer,256,format, args);
-  perror (buffer);
-  va_end (args);
+  va_start(args, format);
+  int n = vsnprintf(buffer, 256, format, args);
+  perror(buffer);
+  va_end(args);
 }
 
-int main ()
+int main()
 {
-   FILE * pFile;
-   char szFileName[]="myfile.txt";
+  FILE *pFile;
+  char szFileName[] = "myfile1.txt";
 
-   pFile = fopen (szFileName,"r");
-   if (pFile == NULL)
-     PrintFError ("Error opening '%s'",szFileName);
-   else
-   {
-     // file successfully open
-     fclose (pFile);
-   }
-   getchar();
-   return 0;
+  pFile = fopen(szFileName, "r");
+  if (pFile == NULL)
+    PrintFError("Error opening '%s'", szFileName);
+  else
+  {
+    // file successfully open
+    fclose(pFile);
+  }
+  getchar();
+  return 0;
 }

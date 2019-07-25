@@ -34,14 +34,16 @@ int mon_log2(char *str_tmp, const char *format, ...)
     printf("\n");
     return i;
 }
-
+#include<string.h>
 int main()
 {
     //warning: ISO C++ forbids converting a string constant to 'char*'
     int i = mon_log("%s,%d,%d,%c", "abc", 2, 3, '\n'); 
     char str[MAXLEN] = {0};
+    
     int j = mon_log2(str, "%s,%d,%d,%c", "abcasdfasdfasdf", 2, 3, '\n'); 
     printf("\n %d   %d\n", i, j);
-    getchar();
+    printf("sizeof(str) = %d\nstrlen(str) = %d\n",sizeof(str), strlen(str));
+    getchar(); 
     return 0;
 }
