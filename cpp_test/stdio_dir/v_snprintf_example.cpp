@@ -27,10 +27,10 @@ int mon_log2(char *str_tmp, const char *format, ...)
     i = vsnprintf(str_tmp, MAXLEN, format, vArgList);
     va_end(vArgList);
     printf("%s", str_tmp); 
-   /*  for (j = 0; j < MAXLEN; j++)
+    for (j = 0; j < MAXLEN; j++)
     {
         printf("%d  ", str_tmp[j]);
-    } */
+    } 
     printf("\n");
     return i;
 }
