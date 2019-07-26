@@ -39,8 +39,7 @@ int mon_log2(char *str_tmp, const char *format, ...)
 
 int main()
 {
-    //warning: ISO C++ forbids converting a string constant to 'char*'
-    int i = mon_log("%s,%d,%d,%c", "abc", 2, 3, '\n'); 
+    int i = mon_log("%s,%d,%d,%c", "abcdefghijklmn", 2, 3, '\n'); 
     char str[MAXLEN] = {0};
     
     int j = mon_log2(str, "%s,%d,%d,%c", "abcasdfasdfasdf", 2, 3, '\n'); 

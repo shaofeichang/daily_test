@@ -12,7 +12,6 @@ void WriteFormatted(FILE *stream, const char *format, ...)
 int main()
 {
     FILE *pFile;
-
     pFile = fopen("myfile.txt", "w");
 
     WriteFormatted(pFile, "Call with %d variable argument.\n", 1);
