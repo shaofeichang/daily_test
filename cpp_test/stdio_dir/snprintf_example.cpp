@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <strings.h>
 #include <string.h>
-#define NUMLEN 20
+#define NUMLEN 15
 int main(void)
 {
     char a[NUMLEN] = {'\0'};
@@ -12,14 +12,15 @@ int main(void)
     {
         printf("a[%d] = %d ", i, a[i]);
     }
-    ret = snprintf(a, NUMLEN, "%d %s", 123, "helloppp");
+    printf("\n sizeof(a): %d ,  strlen(a): %d \n ", sizeof(a), strlen(a));
+    ret = snprintf(a, NUMLEN, "%d %s", 123, "helloqwe");
     printf("ret = %d\n", ret);
-
+    printf("sizeof(a): %d ,  strlen(a): %d \n ", sizeof(a), strlen(a));
     for (i = 0; i < NUMLEN; i++)
     {
-        printf("a[%d] = %d\n", i, a[i]);
+        printf("a[%d] = %d  ", i, a[i]);
     }
+    printf("\t");
     getchar();
     return 0;
 }
-

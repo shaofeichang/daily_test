@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdarg.h>
+#include<string.h>
+
 #define MAXLEN 10
 
 int mon_log(const char *format, ...)
@@ -34,7 +36,7 @@ int mon_log2(char *str_tmp, const char *format, ...)
     printf("\n");
     return i;
 }
-#include<string.h>
+
 int main()
 {
     //warning: ISO C++ forbids converting a string constant to 'char*'
