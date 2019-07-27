@@ -37,6 +37,20 @@ int main()
         std::cout << "Size of first: " << int(first.size()) << '\n';
         std::cout << "Size of second: " << int(second.size()) << '\n';
         std::cout << "Size of third: " << int(third.size()) << '\n';
+        for (int &i : first)
+        {
+            std::cout << i << ' ';
+        } 
+        std::cout << '\n';
+        first.resize(5);
+        first.resize(8,22);
+        first.resize(12);
+        for (size_t i = 0; i < first.size(); i++)
+        {
+            std::cout << first.at(i) << ' ';
+        }
+      
+        std::cout << '\n';
     }
     system("pause");
     return 0;
