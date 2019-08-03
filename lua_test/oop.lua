@@ -16,3 +16,7 @@ end
 function Rectangle:printArea ()
   print("矩形面积为 ",self.area)
 end
+
+r = Rectangle:new(nil, 10, 20)
+print(r.length)
+r:printArea()
