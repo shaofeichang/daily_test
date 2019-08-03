@@ -45,7 +45,7 @@ void sscanf_example()
     char str[20];
     int i;
 
-    sscanf(sentence, "%*s %*s %d", str, &i);
+    sscanf(sentence, "%s %*s %d", str, &i);
     printf("%s -> %d\n", str, i);
 
 }
