@@ -30,7 +30,6 @@ int main()
     for (i = 0; i < 4; i++)
     {
         cout << *(pf + i) << " ";
-        cout << pf[i] << "  ";
     }
     cout << endl;
     system("pause");
