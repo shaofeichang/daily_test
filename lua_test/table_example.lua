@@ -23,3 +23,9 @@ print('alternatetable 是 ', alternatetable)
 print('mytable 索引为 wow 的元素是 ', mytable['wow'])
 mytable = nil
 print('mytable 是 ', mytable)
+mytable = {'Lua1', 'Lua2', 'Lua3'}
+print('newtable is :', table.concat(mytable, ', ', 1, 3))
+table.insert(mytable, 'Lua4')
+table.insert(mytable, 3, 'Lua3.1')
+table.remove(mytable, 4)
+print(table.concat( mytable, ", ",1 ,4 ))
