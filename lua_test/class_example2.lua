@@ -16,7 +16,7 @@ print(string.rep('*', 30))
 print(c1:getself())
 print(c2:getself())
 print(string.rep('*', 30))
-----------------------继承------------------------
+------------------------继承------------------------
 classB = classA:getob() ----非常重要，用于获取继承的self
 function classB:getob(name, address)
     ob = classA:getob(name)
