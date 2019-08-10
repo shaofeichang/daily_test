@@ -5,12 +5,16 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "${workspaceRoot}",
-                "F:/ThirdPart/boost_1_67_0/include"
+                "F:/ThirdPart/boost_1_67_0/include",
+                "G:/APPs/linux-4.14.15/linux-4.14.15/include",
+                "G:/APPs/linux-4.14.15/linux-4.14.15/arch/arm/include/asm"
             ],
             "browse": {
                 "path": [
                     "${workspaceRoot}",
-                    "F:/ThirdPart/boost_1_67_0/lib"
+                    "F:/ThirdPart/boost_1_67_0/lib",
+                    "G:/APPs/linux-4.14.15/linux-4.14.15/include",
+                    "G:/APPs/linux-4.14.15/linux-4.14.15/arch/arm/include/asm"
                 ]
             },
             "defines": [
@@ -21,7 +25,8 @@
             "compilerPath": "D:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
             "cStandard": "c11",
             "cppStandard": "c++17",
-            "intelliSenseMode": "gcc-x64"
+            "intelliSenseMode": "gcc-x64",
+            "windowsSdkVersion": "10.0.17134.0"
         }
     ],
     "version": 4
