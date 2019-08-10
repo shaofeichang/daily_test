@@ -1,5 +1,5 @@
 # daily_test
 
-日常学习
+## 日常学习
 
-For lua or Cpp and others
+### For Cpp and others
