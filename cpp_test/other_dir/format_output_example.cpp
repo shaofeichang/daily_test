@@ -3,6 +3,9 @@
 #include <string>
 #include <iostream>
 #include <sstream>
+#include <iomanip>
+#include <cmath>
+#include <limits>
 using namespace std;
 
 void c_format()
@@ -47,10 +50,44 @@ void sscanf_example()
 
     sscanf(sentence, "%s %*s %d", str, &i);
     printf("%s -> %d\n", str, i);
+}
 
+void precision()
+{
+    const long double pi = std::acos(-1.L);
+    std::cout << "default precision (6): " << pi << '\n'
+              << "std::setprecision(10): " << std::setprecision(10) << pi << '\n'
+              << "max precision:         "
+              << std::setprecision(std::numeric_limits<long double>::digits10 + 1)
+              << pi << '\n';
+}
+void setwex()
+{
+    std::cout << "no setw:" << 42 << '\n'
+              << "setw(6):" << std::setw(6) << 42 << '\n'
+              << "setw(6), several elements: " << 89 << std::setw(6) << 12 << 34 << '\n';
+    std::istringstream is("hello, world");
+    char arr[10];
+    is >> std::setw(6) >> arr;
+    std::cout << "Input from \"" << is.str() << "\" with setw(6) gave \""
+              << arr << "\"\n";
+}
+
+void fixedex()
+{
+    std::cout << "The number 0.01 in fixed:      " << std::fixed << 0.01 << '\n'
+              << "The number 0.01 in scientific: " << std::scientific << 0.01 << '\n'
+              << "The number 0.01 in hexfloat:   " << std::hexfloat << 0.01 << '\n'
+              << "The number 0.01 in default:    " << std::defaultfloat << 0.01 << '\n';
+    double f;
+    std::istringstream("0x1P-1022") >> std::hexfloat >> f;
+    std::cout << "Parsing 0x1P-1022 as hex gives " << f << '\n';
 }
 int main()
 {
+    fixedex();
+    setwex();
+    precision();
     sscanf_example();
     stringstream_format();
     c_format();
