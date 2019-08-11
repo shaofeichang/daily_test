@@ -14,8 +14,21 @@ union unsend23d {
     inunion structinunion;
 };
 unsigned char g_SendData[256];
+
+struct sendData {
+    int data1;
+    int data2;
+    short data3;
+};
+
 int main()
 {
+    sendData sd={123,345,55};
+    unsigned char sdchar[128];
+    // int ret = snprintf(sdchar, 128, "hello");
+    memcpy(sdchar, &sd, sizeof(sd));  
+    sendData sd1;
+    memcpy(&sd1, sdchar, sizeof(sd)); 
     int num1 = 0x01020304;
     int num3 = 0x09080706;
     g_SendData[0] = (unsigned char)num1;
