@@ -29,7 +29,15 @@ int main()
     char str2[] = "memmove can be very useful......";
     memmove(str2 + 20, str2 + 15, 11);
     puts(str2);
-
+    {
+        char src[] = "aaaaaaaaaa";
+        char dst[] = "xyxyxyxyxy";
+        int r = memcpy_s(dst, sizeof dst, src, 5);
+        printf("dst = \"%s\", r = %d\n", dst, r);
+        r = memcpy_s(dst, 5, src, 10); // count 大于 destsz  
+        //r != 0 ,返回错误码，dest填充5个0
+        printf("dst = \"");
+    }
     {
         char str[] = "1234567890";
         puts(str);
@@ -53,8 +61,9 @@ int main()
         int r = memmove_s(dst, sizeof dst, src, 5);
         printf("dst = \"%s\", r = %d\n", dst, r);
         r = memmove_s(dst, 5, src, 10); //  count 大于 destsz
+        //r != 0, 返回错误码，dst填充5个src的前五个
         printf("dst = \"");
-      
+
         for (size_t ndx = 0; ndx < sizeof dst; ++ndx)
         {
             char c = dst[ndx];

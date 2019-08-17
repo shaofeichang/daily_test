@@ -15,20 +15,23 @@ union unsend23d {
 };
 unsigned char g_SendData[256];
 
-struct sendData {
+struct sendData
+{
     int data1;
     int data2;
     short data3;
 };
-
+#include <string.h>
 int main()
 {
-    sendData sd={123,345,55};
-    unsigned char sdchar[128];
+    sendData sd = {123, 345, 55};
+    unsigned char sdchar[10];
     // int ret = snprintf(sdchar, 128, "hello");
-    memcpy(sdchar, &sd, sizeof(sd));  
+    memcpy(sdchar, &sd, sizeof(sd));
     sendData sd1;
-    memcpy(&sd1, sdchar, sizeof(sd)); 
+    memcpy(&sd1, sdchar, sizeof(sd));
+    cout << "sizeof(sdchar) = " << sizeof(sdchar) <<" sizeof(sd) = "<<sizeof(sd)<<endl;
+    
     int num1 = 0x01020304;
     int num3 = 0x09080706;
     g_SendData[0] = (unsigned char)num1;
