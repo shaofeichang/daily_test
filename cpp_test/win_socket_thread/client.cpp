@@ -28,7 +28,8 @@ int main(int argc, char *argv[])
     SOCKADDR_IN servAdr;
     HANDLE hSndThread, hRcvThread;
     if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0)
-        ErrorHandling("WSAStartup() error!");
+        //ErrorHandling("WSAStartup() error!");
+        puts("ErrorHandling(\"WSAStartup() error!\");");
 
     hSock = socket(PF_INET, SOCK_STREAM, 0);
     memset(&servAdr, 0, sizeof(servAdr));
@@ -37,7 +38,7 @@ int main(int argc, char *argv[])
     servAdr.sin_port = htons(1234);
 
     if (connect(hSock, (SOCKADDR *)&servAdr, sizeof(servAdr)) == SOCKET_ERROR)
-        ErrorHandling("connect() error");
+        puts("ErrorHandling(\"connect() error\")");
 
     int resultsend;
     puts("Welcome to joining our chatting room!\n");

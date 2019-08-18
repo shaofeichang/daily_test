@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
     DWORD recvBytes = 0, flags = 0;
 
     if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0)
-        ErrorHandling("WSAStartup() error!");
+        puts("ErrorHandling(\"WSAStartup() error!\");");
 
     hComPort = CreateIoCompletionPort(INVALID_HANDLE_VALUE, NULL, 0, 0); //创建CP对象
     GetSystemInfo(&sysInfo);                                             //获取当前系统的信息
@@ -84,7 +84,7 @@ int main(int argc, char *argv[])
 
         memcpy(&(handleInfo->clntAdr), &clntAdr, addrLen);
 
-        CreateIoCompletionPort((HANDLE)hClntSock, hComPort, (DWORD)handleInfo, 0); //连接套接字和CP对象
+        CreateIoCompletionPort((HANDLE)hClntSock, hComPort, (DWORD)handleInfo->hClntSock, 0); //连接套接字和CP对象
                                                                                    //已完成信息将写入CP对象
         ioInfo = (LPPER_IO_DATA)malloc(sizeof(PER_IO_DATA));                       //存储接收到的信息
         memset(&(ioInfo->overlapped), 0, sizeof(OVERLAPPED));
