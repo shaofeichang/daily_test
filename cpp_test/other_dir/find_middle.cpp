@@ -31,7 +31,7 @@ double findMedianSortedArrays(vector<int> &nums1, vector<int> &nums2)
 }
 int main()
 {
-    vector<int> vec1 = {1,2,3,4,5,6}; // 1 2 3 3 4 4 5 5 6 7 9 
+    vector<int> vec1 = {1,2,3,4}; // 1 2 3 3 4 4 5 5 6 7 9 
     vector<int> vec2 = {7,8,9,10,11};
     cout<<findMedianSortedArrays(vec1, vec2)<<endl;;
     system("pause");
