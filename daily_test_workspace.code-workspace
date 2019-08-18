@@ -6,7 +6,9 @@
 	],
 	"settings": {
 		"files.associations": {
-			"limits": "cpp"
+			"limits": "cpp",
+			"bitset": "cpp",
+			"string_view": "cpp"
 		}
 	}
 }
