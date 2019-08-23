@@ -1,5 +1,6 @@
 #pragma pack(1)
 #include <stdio.h>
+#include <string.h>
 #include <iostream>
 using namespace std;
 struct inunion
@@ -26,6 +27,8 @@ int main()
 {
     sendData sd = {123, 345, 55};
     unsigned char sdchar[10];
+    unsigned char sdchar2[sizeof(sd)];
+    memcpy_s(sdchar2, sizeof(sdchar2), &sd, sizeof(sd));
     // int ret = snprintf(sdchar, 128, "hello");
     memcpy(sdchar, &sd, sizeof(sd));
     sendData sd1;

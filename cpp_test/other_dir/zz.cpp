@@ -9,12 +9,16 @@ struct myclass
 {
     bool operator()(int i, int j) { return (i < j); }
 } myobject;
-
+class A
+{
+public:
+    int a;
+};
 int main()
 {
+
     int myints[] = {32, 71, 12, 45, 26, 80, 53, 33};
     std::vector<int> myvector(myints, myints + 8); // 32 71 12 45 26 80 53 33
-
     // using default comparison (operator <):
     std::sort(myvector.begin(), myvector.begin() + 4); //(12 32 45 71)26 80 53 33
 
@@ -35,7 +39,23 @@ int main()
                                                {12, 35, 11},
                                                {545, 23, 52}};
     std::sort(doublevec.begin(), doublevec.end());
-    std::cout << std::endl;
+
+    std::vector<std::vector<int>> vec;
+    int num[20] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
+    for (int i = 0; i < 2; i++)
+    {
+        std::vector<int> temp;
+        for (size_t j = i * 10; j < i * 10 + 10; j++)
+            temp.push_back(num[j]);
+        vec.push_back(temp);
+    }
+    vec.push_back({11,22});
+    vec[1].push_back(111);
+    std::vector<A> vecmy;
+    A a1;
+    A a2;
+    vecmy.push_back(a1);
+    vecmy.push_back(a2);
     std::cout << '\n';
     return 0;
 }
