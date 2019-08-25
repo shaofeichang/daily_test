@@ -5,18 +5,12 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "${workspaceRoot}",
-                "F:/ThirdPart/boost_1_67_0/include",
-                "G:/APPs/linux-4.14.15/linux-4.14.15/include",
-                "G:/APPs/linux-4.14.15/linux-4.14.15/include/linux",
-                "G:/APPs/linux-4.14.15/linux-4.14.15/arch/arm/include/asm"
+                "F:/ThirdPart/boost_1_67_0/include"
             ],
             "browse": {
                 "path": [
                     "${workspaceRoot}",
-                    "F:/ThirdPart/boost_1_67_0/lib",
-                    "G:/APPs/linux-4.14.15/linux-4.14.15/include",
-                    "G:/APPs/linux-4.14.15/linux-4.14.15/include/linux",
-                    "G:/APPs/linux-4.14.15/linux-4.14.15/arch/arm/include/asm"
+                    "F:/ThirdPart/boost_1_67_0/lib"
                 ]
             },
             "defines": [

@@ -10,8 +10,39 @@ struct myclass
     bool operator()(int i, int j) { return (i < j); }
 } myobject;
 
+int funcA(int i = 10)
+{
+    std::cout << "FUNCA  " << i << std::endl;
+    return i;
+}
+
+class A
+{
+public:
+    virtual int func(int i = 1)
+    {
+        std::cout << "CLASS A" << std::endl;
+        return i;
+    }
+    virtual ~A() { std::cout << "~A" << std::endl; }
+};
+class B : public A
+{
+public:
+    virtual int func(int i = 10)
+    {
+        std::cout << "CLASS B" << i << std::endl;
+        return i;
+    }
+    virtual ~B() { std::cout << "~B" << std::endl; }
+};
+
 int main()
 {
+    A *pb = new B;
+    std::cout<<pb->func()<<std::endl;
+    delete pb;
+    std::cout << funcA() << std::endl;
 
     int myints[] = {32, 71, 12, 45, 26, 80, 53, 33};
     std::vector<int> myvector(myints, myints + 8); // 32 71 12 45 26 80 53 33
@@ -35,6 +66,7 @@ int main()
                                                {12, 35, 11},
                                                {545, 23, 52}};
     std::sort(doublevec.begin(), doublevec.end());
+
     std::cout << '\n';
     return 0;
 }
