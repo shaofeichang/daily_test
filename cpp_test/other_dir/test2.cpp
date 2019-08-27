@@ -1,10 +1,13 @@
 #include <iostream>
 #include <vector>
 #include <stdio.h>
+#include <string>
 using namespace std;
 
 int main()
 {
+    string s1 = "aaa", s2 = "bbb";
+    s1 + s2 = "as"; 
     int testCounts;
     int testNums;
     vector<int> vec;

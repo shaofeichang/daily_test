@@ -6,6 +6,7 @@
         "-LThirdPart/boost_1_67_0/lib",
         "-lws2_32",
         "-IF:/ThirdPart/boost_1_67_0/include", 
+        "-I${workspaceRoot}/cpp_test/class_dir/",
         "-o","../output/${fileBasenameNoExtension}.exe"], // 编译命令参数
     "problemMatcher": {
         "owner": "cpp",
