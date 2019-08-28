@@ -29,6 +29,7 @@ int main()
     p(123);
     mf(123456);
 
+
     // 存储自由函数
     std::function<void(int)> f_display = print_num;
     f_display(-9);
