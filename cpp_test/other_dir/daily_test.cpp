@@ -140,53 +140,60 @@ using namespace std;
 //     system("pause");
 //     return 0;
 // }
+#define N 10000
+bool canArrangeWords(int num, char **arr)
+{
+    for (size_t i = 0; i < num - 1; i++)
+    {
+        if (arr[i][strlen(arr[i]) - 1] != arr[i + 1][0])
+            return false;
+        // cout << *(arr + i) << endl;
+    }
+    return true;
+}
 
-#define N 5000000 + 5
-char a[N], b[N];
-int c[N];
 int main()
 {
-
-    cin >> a;
-    int stl;
-    stl = strlen(a);
-    stack<int> s;
-    memset(c, -1, sizeof(c));
-    int index;
-    for (int i = 0; i < stl; i++)
+    int row;
+    int col;
+    std::cin >> row >> col;
+    int **dem;
+    dem = new int *[row];
+    for (size_t i = 0; i < row; i++)
     {
-        if (a[i] == '(')
-        {
-            s.push(i); //把左括号的下标亚栈
-        }
-        else if (a[i] == ')') //遇到有括号时候出栈，记录下标
-        {
-            index = s.top();
-            c[i] = index;
-            c[index] = i;
-            s.pop();
-        }
+        dem[i] = new int[col];
     }
-    //for (int i = 0; i < stl; i++)
-    //cout << c[i] << endl;
-    int cur = 0, d = 1, sum = 0;
-    //a(bc(de)fg)hijk
-    while (cur != stl)
-    {
-        if (a[cur] == '(' || a[cur] == ')') // 当第二次遇到（时，d再一次反转，这次从)向右继续
-        {
-            cur = c[cur];
-            d = -d;
-            cur += d;
-        }
-        else
-        {
-            b[sum++] = a[cur];
-            cur += d;
-        }
-    }
-    b[sum] = '\0';
-    cout << b << endl;
 
+    for (size_t i = 0; i < row; i++)
+    {
+        delete[] dem[i];
+    }
+
+    vector<int> vectemp = {1, 2, 3, 4, 5, 6, 7};
+    vector<int> vectemp1(10, 0);
+    vector<int>::iterator iter = vectemp1.begin();
+    int val = 123;
+    for (; iter != vectemp1.end(); iter++)
+    {
+        *iter = val++;
+    }
+
+    vectemp1.push_back(123);
+    int i = 5;
+    printf("%d %d %d", ++i, i++, i++);
+    int *arr = new int;
+    arr[0] = 123;
+    int num;
+    cin >> num;
+    char *ch[N];
+    ;
+    for (size_t i = 0; i < num; i++)
+    {
+        char *temp = new char;
+        cin >> temp;
+        ch[i] = temp;
+    }
+    cout << canArrangeWords(num, ch) << endl;
+    system("pause");
     return 0;
 }
