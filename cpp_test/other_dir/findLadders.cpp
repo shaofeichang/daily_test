@@ -1,5 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
+
+void dfs(vector<string> &ans, string &begin, string &end);
+
 vector<vector<string>> res;
 unordered_map<string, vector<string>> Hash;
 
@@ -66,4 +69,11 @@ void dfs(vector<string> &ans, string &begin, string &end)
         dfs(ans, str, end);
         ans.pop_back();
     }
+}
+int main()
+{
+    string str1 = "hit";
+    string str2 = "cog";
+    vector<string> strlist = {"hot","dot","dog","lot","log","cog"};
+    findLadders(str1, str2, strlist);
 }
