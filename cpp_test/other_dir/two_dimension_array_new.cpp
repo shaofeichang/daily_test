@@ -57,7 +57,7 @@ void unknowTwoSeries(int row, int col)
 void knowCol(int row)
 {
     const int col = 6;
-    int(*arrayPtr)[col];
+    int(*arrayPtr)[col]; // 数组指针
     arrayPtr = new int[row][col];
     for (size_t i = 0; i < row; i++)
     {
@@ -81,7 +81,7 @@ void knowCol(int row)
 void knowRowUnSeries(int col)
 {
     const int row = 3;
-    int *arrayPtr[row];
+    int *arrayPtr[row];  // 指针数组
     for (size_t i = 0; i < row; i++)
     {
         arrayPtr[i] = new int[col];
@@ -111,7 +111,7 @@ void knowRowUnSeries(int col)
 void knowRowSerise(int col)
 {
     const int row = 3;
-    int *arrayPtr[row];
+    int *arrayPtr[row]; //指针数组
     arrayPtr[0] = new int[col * row];
     for (int i = 1; i < row; i++)
     {

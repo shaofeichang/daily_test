@@ -151,9 +151,65 @@ bool canArrangeWords(int num, char **arr)
     }
     return true;
 }
-
+struct TreeNode
+{
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
+vector<vector<int>> zigzagLevelOrder(TreeNode *root)
+{
+    vector<vector<int>> res;
+    if (root == NULL)
+        return res;
+    stack<TreeNode *> st;
+    st.push(root);
+    bool dir = false;
+    while (!st.empty())
+    {
+        vector<int> vectemp;
+        int size = st.size(); 
+        stack<TreeNode *> te;
+        for (int i = 0; i < size; i++)
+        {
+            TreeNode *temp = st.top();
+            st.pop();
+            vectemp.push_back(temp->val);
+           
+            if (dir)
+            {
+                if (temp->right)
+                    te.push(temp->right);
+                if (temp->left)
+                    te.push(temp->left);
+            }
+            if (!dir)
+            {
+                if (temp->left)
+                    te.push(temp->left);
+                if (temp->right)
+                    te.push(temp->right);
+            }
+        }
+        dir = !dir;
+        st.swap(te);
+        res.push_back(vectemp);
+    }
+    return res;
+}
 int main()
 {
+    TreeNode *t1 = new TreeNode(3);
+    TreeNode *t2 = new TreeNode(9);
+    TreeNode *t3 = new TreeNode(20);
+    TreeNode *t4 = new TreeNode(15);
+    TreeNode* t5 = new TreeNode(7);
+    t1->left = t2;
+    t1->right = t3;
+    t3->left = t4;
+    t3->right = t5;
+    zigzagLevelOrder(t1);
     int row;
     int col;
     std::cin >> row >> col;
