@@ -14,7 +14,6 @@ int getLength(int row, int col)
 }
 int main()
 {
-
     cin >> M;
     getchar();
     cin >> N;
