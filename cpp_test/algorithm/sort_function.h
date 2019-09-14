@@ -55,3 +55,30 @@ void s_insert(vector<T> &vec)
             vec[j] = cur;
     }
 }
+template <typename T>
+void s_shell(vector<T> &vec)
+{
+    int gap = 1;
+    while (gap < vec.size())
+        gap = gap * 3 + 1;
+    while (gap > 0)
+    {
+        for (int i = gap; i < vec.size(); i++)
+        {
+            int temp = vec[i];
+            int j = i - gap;
+            while (j >= 0 && vec[j] > temp)
+            {
+                vec[j + gap] = vec[j];
+                j -= gap;
+            }
+            vec[j + gap] = temp;
+        }
+        gap = (int)(gap / 3);
+    }
+}
+template<typename T>
+void s_merge(vector<T> vec)
+{
+    
+}
