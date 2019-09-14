@@ -129,10 +129,10 @@ int partition(vector<T> &vec, int left, int right)
     int index = pivot + 1;
     for (size_t i = index; i <= right; i++)
     {
-        if(vec[i] < vec[pivot])
+        if (vec[i] < vec[pivot])
         {
             s_swap(&vec[i], &vec[index]);
-            index ++;
+            index++;
         }
     }
     s_swap(&vec[pivot], &vec[index - 1]);
@@ -141,7 +141,7 @@ int partition(vector<T> &vec, int left, int right)
 template <typename T>
 vector<T> sort_quick(vector<T> &vec, int left, int right)
 {
-    if(left < right)
+    if (left < right)
     {
         int index = partition(vec, left, right);
         sort_quick(vec, left, index - 1);
@@ -154,4 +154,30 @@ template <typename T>
 void s_quick(vector<T> &vec)
 {
     sort_quick(vec, 0, vec.size() - 1);
+}
+void quick_sort_recursive(int arr[], int start, int end)
+{
+    if (start >= end)
+        return;
+    int mid = arr[end];
+    int left = start, right = end - 1;
+    while (left < right)
+    {
+        while (arr[left] < mid && left < right)
+            left++;
+        while (arr[right] >= mid && left < right)
+            right--;
+        s_swap(&arr[left], &arr[right]);
+    }
+    if (arr[left] >= arr[end])
+        s_swap(&arr[left], &arr[end]);
+    else
+        left++;
+    if (left)
+        quick_sort_recursive(arr, start, left - 1);
+    quick_sort_recursive(arr, left + 1, end);
+}
+void quick_sort(int arr[], int len)
+{
+    quick_sort_recursive(arr, 0, len - 1);
 }
