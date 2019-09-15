@@ -54,6 +54,7 @@ void *thread1(void *arg)
     pthread_join(*(pthread_t *)arg, NULL);
     printf("leave thread1\n");
     pthread_exit(0);
+    return nullptr;
 }
 /*
  * thread2() will be execute by thread2, after pthread_create()
@@ -71,5 +72,6 @@ void *thread2(void *arg)
     pthread_mutex_unlock(&mutex);
     printf("leave thread2\n");
     pthread_exit(0);
+    return nullptr;
 }
 
