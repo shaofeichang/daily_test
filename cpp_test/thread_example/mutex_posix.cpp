@@ -52,6 +52,7 @@ int main(int argc, char *argv[])
     {
         pthread_join(thread_id[i], &getret);
         printf("join: %s\n", (char *)getret);
+        getret = NULL;
     }
     printf("result: %lld \n", num);
     pthread_attr_destroy(&attr);
