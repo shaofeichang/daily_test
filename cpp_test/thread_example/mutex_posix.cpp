@@ -43,14 +43,16 @@ int main(int argc, char *argv[])
     {
         pthread_setname_np(thread_id[i], (str + std::to_string(i)).c_str());
         if (i % 2)
-            pthread_create(&(thread_id[i]), &attr, thread_inc, (void*)(thread_id[i]));
+            pthread_create(&(thread_id[i]), &attr, thread_inc, (void *)(thread_id[i]));
         else
-            pthread_create(&(thread_id[i]), &attr, thread_des, (void*)(thread_id[i]));
+            pthread_create(&(thread_id[i]), &attr, thread_des, (void *)(thread_id[i]));
     }
-
+    void *getret;
     for (i = 0; i < NUM_THREAD; i++)
-        pthread_join(thread_id[i], NULL);
-
+    {
+        pthread_join(thread_id[i], &getret);
+        printf("join: %s\n", (char *)getret);
+    }
     printf("result: %lld \n", num);
     pthread_attr_destroy(&attr);
     pthread_mutex_destroy(&mutex); //互斥量的销毁
@@ -62,7 +64,7 @@ int main(int argc, char *argv[])
  这样是延长了线程的等待时间，但缩短了加锁，释放锁函数调用的时间，这里没有定论，自己酌情考虑*/
 void *thread_inc(void *arg)
 {
-    pthread_t pt = (pthread_t) arg;
+    pthread_t pt = (pthread_t)arg;
     char str[128] = {'\0'};
     pthread_getname_np(pt, str, 128);
     printf("thread inc name: %s\n", str);
@@ -70,13 +72,15 @@ void *thread_inc(void *arg)
     for (int i = 0; i < 1000000; i++)
         num += 1;
     pthread_mutex_unlock(&mutex); //互斥量释放锁
+    const char *ret = "thread_inc exit";
+    pthread_exit((void *)ret);
     return NULL;
 }
 
 /*缩短了线程等待时间，但循环创建，释放锁函数调用时间增加*/
 void *thread_des(void *arg)
 {
-    pthread_t pt = (pthread_t) arg;
+    pthread_t pt = (pthread_t)arg;
     char str[128] = {'\0'};
     pthread_getname_np(pt, str, 128);
     printf("thread des name: %s\n", str);
@@ -86,5 +90,7 @@ void *thread_des(void *arg)
         num -= 1;
         pthread_mutex_unlock(&mutex);
     }
+    const char *ret = "thread_dec exit";
+    pthread_exit((void *)ret);
     return NULL;
 }
