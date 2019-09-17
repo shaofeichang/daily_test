@@ -152,25 +152,27 @@ void DispQueueR2(QNode *&rear)
 
 int main()
 {
-    QNode *p;
-
-    //不带头结点的循环单链表
-     InitQu(p);
-     int i=0;
-     for (i=1;i<10;i++)
-     {
-         EnQu(p,i*i-1);
-     }
-     DispQueueR(p);
-
-    //带头结点的循环单链表
-    // InitQu1(p);
-    // int j = 0;
-    // for (j = 1; j < 10; j++)
-    // {
-    //     EnQu1(p, j * j - 1);
-    // }
-    // DispQueueR2(p);
+    {
+        QNode *p;
+        //不带头结点的循环单链表
+        InitQu(p);
+        int i = 0;
+        for (i = 1; i < 10; i++)
+        {
+            EnQu(p, i * i - 1);
+        }
+        DispQueueR(p);
+    }
+    {
+        QNode *p;
+        //带头结点的循环单链表
+        InitQu1(p);
+        int j = 0;
+        for (j = 1; j < 10; j++)
+        {
+            EnQu1(p, j * j - 1);
+        }
+        DispQueueR2(p);
+    }
     getchar();
-
 }
