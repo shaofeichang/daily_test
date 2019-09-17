@@ -20,7 +20,6 @@ int main()
     std::cout << *a.get() << "\n";
     std::cout << *a << "\n";
     std::cout << *p << "\n";
-    
     std::shared_ptr<C> ssp(new C(100));
     C *cp = new C(1234);
     std::shared_ptr<C> ptrc(cp);
