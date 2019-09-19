@@ -169,14 +169,14 @@ vector<vector<int>> zigzagLevelOrder(TreeNode *root)
     while (!st.empty())
     {
         vector<int> vectemp;
-        int size = st.size(); 
+        int size = st.size();
         stack<TreeNode *> te;
         for (int i = 0; i < size; i++)
         {
             TreeNode *temp = st.top();
             st.pop();
             vectemp.push_back(temp->val);
-           
+
             if (dir)
             {
                 if (temp->right)
@@ -200,56 +200,83 @@ vector<vector<int>> zigzagLevelOrder(TreeNode *root)
 }
 int main()
 {
-    TreeNode *t1 = new TreeNode(3);
-    TreeNode *t2 = new TreeNode(9);
-    TreeNode *t3 = new TreeNode(20);
-    TreeNode *t4 = new TreeNode(15);
-    TreeNode* t5 = new TreeNode(7);
-    t1->left = t2;
-    t1->right = t3;
-    t3->left = t4;
-    t3->right = t5;
-    zigzagLevelOrder(t1);
-    int row;
-    int col;
-    std::cin >> row >> col;
-    int **dem;
-    dem = new int *[row];
-    for (size_t i = 0; i < row; i++)
+    //string str;
+    // cin >> str;
+    char str[1000];
+    memset(str, 0, 1000);
+    cin.getline(str, 1000);
+    int i;
+    for (i = 0; str[i] != '\0'; i++)
     {
-        dem[i] = new int[col];
+        if ('A' <= str[i] && str[i] <= 'Z')
+        {
+            str[i] = tolower(str[i]);
+        }
+        else if (str[i] == ' ')
+        {
+            str[i] = '0';
+        }
+    }
+    i--;
+    while (i>=0)
+    {
+        cout << str[i];
+        i--;
     }
 
-    for (size_t i = 0; i < row; i++)
-    {
-        delete[] dem[i];
-    }
+    
+   // reverse(str.begin(), str.end());
+    // cout << str << endl;
+    // TreeNode *t1 = new TreeNode(3);
+    // TreeNode *t2 = new TreeNode(9);
+    // TreeNode *t3 = new TreeNode(20);
+    // TreeNode *t4 = new TreeNode(15);
+    // TreeNode *t5 = new TreeNode(7);
+    // t1->left = t2;
+    // t1->right = t3;
+    // t3->left = t4;
+    // t3->right = t5;
+    // zigzagLevelOrder(t1);
+    // int row;
+    // int col;
+    // std::cin >> row >> col;
+    // int **dem;
+    // dem = new int *[row];
+    // for (size_t i = 0; i < row; i++)
+    // {
+    //     dem[i] = new int[col];
+    // }
 
-    vector<int> vectemp = {1, 2, 3, 4, 5, 6, 7};
-    vector<int> vectemp1(10, 0);
-    vector<int>::iterator iter = vectemp1.begin();
-    int val = 123;
-    for (; iter != vectemp1.end(); iter++)
-    {
-        *iter = val++;
-    }
+    // for (size_t i = 0; i < row; i++)
+    // {
+    //     delete[] dem[i];
+    // }
 
-    vectemp1.push_back(123);
-    int i = 5;
-    printf("%d %d %d", ++i, i++, i++);
-    int *arr = new int;
-    arr[0] = 123;
-    int num;
-    cin >> num;
-    char *ch[N];
-    ;
-    for (size_t i = 0; i < num; i++)
-    {
-        char *temp = new char;
-        cin >> temp;
-        ch[i] = temp;
-    }
-    cout << canArrangeWords(num, ch) << endl;
+    // vector<int> vectemp = {1, 2, 3, 4, 5, 6, 7};
+    // vector<int> vectemp1(10, 0);
+    // vector<int>::iterator iter = vectemp1.begin();
+    // int val = 123;
+    // for (; iter != vectemp1.end(); iter++)
+    // {
+    //     *iter = val++;
+    // }
+
+    // vectemp1.push_back(123);
+    // int i = 5;
+    // printf("%d %d %d", ++i, i++, i++);
+    // int *arr = new int;
+    // arr[0] = 123;
+    // int num;
+    // cin >> num;
+    // char *ch[N];
+    // ;
+    // for (size_t i = 0; i < num; i++)
+    // {
+    //     char *temp = new char;
+    //     cin >> temp;
+    //     ch[i] = temp;
+    // }
+    // cout << canArrangeWords(num, ch) << endl;
     system("pause");
     return 0;
 }
