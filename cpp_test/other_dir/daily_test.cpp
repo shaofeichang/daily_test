@@ -198,8 +198,26 @@ vector<vector<int>> zigzagLevelOrder(TreeNode *root)
     }
     return res;
 }
+struct point
+{
+    int a;
+    int *b;
+} p;
 int main()
 {
+    {
+        int aa[3][4], *p, i;
+        p = &aa[0][0];
+        for(i = 0;i<12; i++){
+            p[i] = i+i/2;
+        }
+        cout << aa[1][3]<<endl;
+    }
+    p.a = 300;
+    p.b = (int *)500;
+    cout << p.a + p.b << endl;
+    int a = 1, b = 32;
+    cout << (a << b) << " b: " << (1 << 32) << endl;
     //string str;
     // cin >> str;
     char str[1000];
@@ -218,14 +236,13 @@ int main()
         }
     }
     i--;
-    while (i>=0)
+    while (i >= 0)
     {
         cout << str[i];
         i--;
     }
 
-    
-   // reverse(str.begin(), str.end());
+    // reverse(str.begin(), str.end());
     // cout << str << endl;
     // TreeNode *t1 = new TreeNode(3);
     // TreeNode *t2 = new TreeNode(9);
