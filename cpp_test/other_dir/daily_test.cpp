@@ -205,21 +205,16 @@ struct point
 } p;
 int main()
 {
-    {
-        int aa[3][4], *p, i;
-        p = &aa[0][0];
-        for(i = 0;i<12; i++){
-            p[i] = i+i/2;
-        }
-        cout << aa[1][3]<<endl;
-    }
-    p.a = 300;
-    p.b = (int *)500;
-    cout << p.a + p.b << endl;
-    int a = 1, b = 32;
-    cout << (a << b) << " b: " << (1 << 32) << endl;
+    // {
+    //     int n, k;
+    //     string str;
+    //     cin >> n >> k;
+    //     cin >> str;
+
+    // }
     //string str;
     // cin >> str;
+
     char str[1000];
     memset(str, 0, 1000);
     cin.getline(str, 1000);
