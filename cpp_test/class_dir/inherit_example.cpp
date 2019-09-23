@@ -53,7 +53,7 @@ int main()
     InA ia3(2,3,4);// = ia1 + ia2;
     ia3.printNum();
     ia3.APrintNum1();
-    /*
+   
     A *ptra1 = new InA(1, 2, 3);
     ptra1->printNum();
     A *ptra = dynamic_cast<A *>(ptra1);
@@ -75,9 +75,9 @@ int main()
     else
         cout << "Dynamic ERR" << endl;
     delete ptra1;
-    delete inaPtr;*/
-
-    /*InA *ina = new InA(11, 22, 33);
+    delete inaPtr;
+/*
+    InA *ina = new InA(11, 22, 33);
     ina->printNum();
     A *inaPtr = nullptr;
     if (inaPtr = dynamic_cast<A *>(ina))
