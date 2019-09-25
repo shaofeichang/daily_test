@@ -46,9 +46,15 @@ private:
     int num1;
     int num3;
 };
-
+template<class T>
+typename T::value_type
+printhello(T num)
+{
+    return num;
+}
 int main()
 {
+    cout << printhello(1324)<<endl;
     A a1(1, 2, 3);
     A a2(10, 20, 30);
     A a3 = a1 + a2;

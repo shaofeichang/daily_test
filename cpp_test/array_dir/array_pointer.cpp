@@ -3,10 +3,70 @@ using namespace std;
 float *find(float p[][4], int m);
 float *find1(float (*p)[4], int m);
 float *find2(float *p, int m);
-
+void sizeofaff(int a[10])
+{
+    cout << sizeof(a) << endl;
+    int b[10];
+    cout << sizeof(b) << endl;
+}
+union A {
+    unsigned char ch[4];
+    int num;
+};
 int main()
 {
+    {
+        int a = 0x01020304;
+        int *pi = &a;
+        char *pa = (char*)&a;
+        cout << *pa << endl;
+        cout << *pa++ << endl;
+        cout << "HELLO" << endl;
+    }
+    {
+        union {
+            char str;
+            int data;
+        };
+        data = 0x01020304;
+        if (str == 0x01)
+        {
+            cout << "big endian" << endl;
+        }
+        else if (str == 0x04)
+        {
+            cout << "little " << endl;
+        }
+        else
+        {
+            cout << "unknow" << endl;
+        }
+    }
+    {
+        A a;
+        a.num = 0x12345678;
+        for (size_t i = 0; i < 4; i++)
+        {
+            cout << hex << a.ch[i] << "  ";
+        }
+        char ccc[4];
+        memcpy(ccc, &a.num, 4);
+        cout << endl;
+    }
+    {
+        int test1[] = {10, 20, 30, 40, 50, 60};
+        sizeofaff(test1);
+        cout << test1 + 2 << "  " << (*test1)++ << " " << endl;
+        cout << test1 << endl;
+        cout << test1 + 1 << endl;
+        cout << "sizeof" << sizeof(test1) << endl;
+        int *pint = test1;
+        cout << *pint+1 << endl;
+        cout << &test1 + 1 << endl;
+        cout << "HELLOWORLD" << endl;
+    }
     int test1[2][3] = {{1, 2, 3}, {3, 4, 5}};
+
     int(*ppp)[3] = test1;
     cout << " test1: " << test1 << "\t &test1: " << &test1 << "test1[0][0]: " << test1[0][0] << endl;
     cout << *(*test1 + 1) << "|" << **(test1 + 1) << "|" << test1 + 1 << endl;

@@ -205,16 +205,9 @@ struct point
 } p;
 int main()
 {
-    // {
-    //     int n, k;
-    //     string str;
-    //     cin >> n >> k;
-    //     cin >> str;
-
-    // }
-    //string str;
-    // cin >> str;
-
+    using ptrp = point;
+    ptrp p1{12,nullptr};
+    ptrp p2{12,NULL};
     char str[1000];
     memset(str, 0, 1000);
     cin.getline(str, 1000);
