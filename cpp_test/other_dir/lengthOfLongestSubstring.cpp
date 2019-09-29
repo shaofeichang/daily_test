@@ -41,11 +41,24 @@ int lengthOfLongestSubstring2(string s)
     len = len > str.length() ? len : str.length();
     return len;
 }
+int lengthOfLongestSubstring(string s)
+{
+    int arr[128] = {0};
+    int ret = 0;
+    for (int i = 0, num = 0; i < s.length(); i++)
+    {
+        num = max(arr[s[i]], num);
+        ret = max(ret, i - num + 1);
+        arr[s[i]] = i + 1;
+    }
+    return ret;
+}
 int main()
 {
     string str = "stringstring";
-    cout<<lengthOfLongestSubstring2(str)<<endl;
-    cout<<lengthOfLongestSubstring1(str)<<endl;
+    cout << lengthOfLongestSubstring(str) << endl;
+    cout << lengthOfLongestSubstring2(str) << endl;
+    cout << lengthOfLongestSubstring1(str) << endl;
     system("pause");
     return 0;
 }
