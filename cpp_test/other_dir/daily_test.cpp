@@ -173,8 +173,15 @@ struct point
     int a;
     int *b;
 } p;
+void readconst()
+{
+    static int sint = 123;
+    const int cint = 456;
+    int iint = 789;
+}
 int main()
 {
+    readconst();
     using ptrp = point;
     ptrp p1{12,nullptr};
     ptrp p2{12,NULL};
