@@ -2,10 +2,6 @@
 	"folders": [
 		{
 			"path": "."
-		},
-		{
-			"name": "daily_test @ 6dafd5b",
-			"uri": "gitlens://6dafd5b/e:/gitClone/daily_test?{\"path\":\"/e:/gitClone/daily_test\",\"ref\":\"6dafd5b9e9817ac37cd198701fd2ad76257a4538\",\"repoPath\":\"e:/gitClone/daily_test\"}"
 		}
 	],
 	"settings": {
