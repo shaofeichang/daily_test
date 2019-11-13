@@ -52,6 +52,10 @@ private:
 
 int main()
 {
+    A *ppa = new A[8];
+    ppa[0].setNum(123);
+    ppa[1].setNum(127893);
+    free(ppa);
     A **Aptr = NULL;
     int row = 3;
     int col = 6;
