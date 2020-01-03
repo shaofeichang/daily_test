@@ -16,3 +16,18 @@ members本身不放在object中，只有“指向member的指针”放在object�
 
 ## 3. C++对象模型（The C++ Object Model）
 
+C++对象模型从简单模型派生而来，对内存空间和存取时间进行了优化。
+
+1. nonstatic data members 配置于每一个class object中
+
+2. static data members 存放在class object之外
+
+3. static 和 nonstatic function members也被存放在所有的class object之外
+
+virtual functions以两个步骤：
+
+1. 每个class产生一堆指向virtual functions的指针，放在表格之中，称为virtual table(vtbl).
+
+2. 每个class object被添加了一个指针，指向相关的virtual table(vptr).vptr的setting和resetting都由每个class的constructor、destructor和copy assignment运算符自动完成。每个class关联的type_info object（runtime type identification，RTTI）也经由virtual table指出，放在表格的第一个slot处。
+
+<div align=center><img src="https://github.com/shaofeichang/daily_test/blob/object_model/cpp_object_model.png?raw=true" width="50%" height="50%"></div>
