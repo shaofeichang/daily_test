@@ -12,7 +12,7 @@ int main()
     int a = 10;
     int *b = NULL;
     int *c = NULL;
-
+jkljl
     b = &a;
 
     print_number(b);

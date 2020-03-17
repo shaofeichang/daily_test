@@ -12,5 +12,6 @@ int main()
     printf(STR(vck));           // 输出字符串"vck"
     printf("%d\n", CONS(2, 3)); // 2e3 输出:2000
 
+    getchar();
     return 0;
 }
