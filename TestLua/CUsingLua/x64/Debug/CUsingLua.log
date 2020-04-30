@@ -1,52 +1,9 @@
-﻿生成启动时间为 2019/7/13 21:39:38。
-     1>项目“E:\gitClone\daily_test\TestLua\CUsingLua\CUsingLua.vcxproj”在节点 2 上(build 个目标)。
-     1>InitializeBuildStatus:
-         正在创建“x64\Debug\CUsingLua.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
-       ClCompile:
-         所有输出均为最新。
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"E:\gitClone\daily_test\TestLua\CUsingLua\Debug\CUsingLua.exe" /NOLOGO luad.lib opencv_world341.lib pthreadVC2.lib opencv_world341.lib pthreadVC2.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"x64\Debug\CUsingLua.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\gitClone\daily_test\TestLua\CUsingLua\Debug\CUsingLua.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\gitClone\daily_test\TestLua\CUsingLua\Debug\CUsingLua.lib" /MACHINE:X64 x64\Debug\main.obj
-         LINK : 没有找到 E:\gitClone\daily_test\TestLua\CUsingLua\Debug\CUsingLua.exe 或上一个增量链接没有生成它；正在执行完全链接
-     1>luad.lib(lapi.obj) : warning LNK4099: 未找到 PDB“vc100.pdb”(使用“luad.lib(lapi.obj)”或在“E:\gitClone\daily_test\TestLua\CUsingLua\Debug\vc100.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>luad.lib(lauxlib.obj) : warning LNK4099: 未找到 PDB“vc100.pdb”(使用“luad.lib(lauxlib.obj)”或在“E:\gitClone\daily_test\TestLua\CUsingLua\Debug\vc100.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>luad.lib(lbaselib.obj) : warning LNK4099: 未找到 PDB“vc100.pdb”(使用“luad.lib(lbaselib.obj)”或在“E:\gitClone\daily_test\TestLua\CUsingLua\Debug\vc100.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>luad.lib(lcode.obj) : warning LNK4099: 未找到 PDB“vc100.pdb”(使用“luad.lib(lcode.obj)”或在“E:\gitClone\daily_test\TestLua\CUsingLua\Debug\vc100.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>luad.lib(lcorolib.obj) : warning LNK4099: 未找到 PDB“vc100.pdb”(使用“luad.lib(lcorolib.obj)”或在“E:\gitClone\daily_test\TestLua\CUsingLua\Debug\vc100.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>luad.lib(lctype.obj) : warning LNK4099: 未找到 PDB“vc100.pdb”(使用“luad.lib(lctype.obj)”或在“E:\gitClone\daily_test\TestLua\CUsingLua\Debug\vc100.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>luad.lib(ldblib.obj) : warning LNK4099: 未找到 PDB“vc100.pdb”(使用“luad.lib(ldblib.obj)”或在“E:\gitClone\daily_test\TestLua\CUsingLua\Debug\vc100.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>luad.lib(ldebug.obj) : warning LNK4099: 未找到 PDB“vc100.pdb”(使用“luad.lib(ldebug.obj)”或在“E:\gitClone\daily_test\TestLua\CUsingLua\Debug\vc100.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>luad.lib(ldo.obj) : warning LNK4099: 未找到 PDB“vc100.pdb”(使用“luad.lib(ldo.obj)”或在“E:\gitClone\daily_test\TestLua\CUsingLua\Debug\vc100.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>luad.lib(ldump.obj) : warning LNK4099: 未找到 PDB“vc100.pdb”(使用“luad.lib(ldump.obj)”或在“E:\gitClone\daily_test\TestLua\CUsingLua\Debug\vc100.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>luad.lib(lfunc.obj) : warning LNK4099: 未找到 PDB“vc100.pdb”(使用“luad.lib(lfunc.obj)”或在“E:\gitClone\daily_test\TestLua\CUsingLua\Debug\vc100.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>luad.lib(lgc.obj) : warning LNK4099: 未找到 PDB“vc100.pdb”(使用“luad.lib(lgc.obj)”或在“E:\gitClone\daily_test\TestLua\CUsingLua\Debug\vc100.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>luad.lib(linit.obj) : warning LNK4099: 未找到 PDB“vc100.pdb”(使用“luad.lib(linit.obj)”或在“E:\gitClone\daily_test\TestLua\CUsingLua\Debug\vc100.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>luad.lib(liolib.obj) : warning LNK4099: 未找到 PDB“vc100.pdb”(使用“luad.lib(liolib.obj)”或在“E:\gitClone\daily_test\TestLua\CUsingLua\Debug\vc100.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>luad.lib(llex.obj) : warning LNK4099: 未找到 PDB“vc100.pdb”(使用“luad.lib(llex.obj)”或在“E:\gitClone\daily_test\TestLua\CUsingLua\Debug\vc100.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>luad.lib(lmathlib.obj) : warning LNK4099: 未找到 PDB“vc100.pdb”(使用“luad.lib(lmathlib.obj)”或在“E:\gitClone\daily_test\TestLua\CUsingLua\Debug\vc100.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>luad.lib(lmem.obj) : warning LNK4099: 未找到 PDB“vc100.pdb”(使用“luad.lib(lmem.obj)”或在“E:\gitClone\daily_test\TestLua\CUsingLua\Debug\vc100.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>luad.lib(loadlib.obj) : warning LNK4099: 未找到 PDB“vc100.pdb”(使用“luad.lib(loadlib.obj)”或在“E:\gitClone\daily_test\TestLua\CUsingLua\Debug\vc100.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>luad.lib(lobject.obj) : warning LNK4099: 未找到 PDB“vc100.pdb”(使用“luad.lib(lobject.obj)”或在“E:\gitClone\daily_test\TestLua\CUsingLua\Debug\vc100.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>luad.lib(lopcodes.obj) : warning LNK4099: 未找到 PDB“vc100.pdb”(使用“luad.lib(lopcodes.obj)”或在“E:\gitClone\daily_test\TestLua\CUsingLua\Debug\vc100.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>luad.lib(loslib.obj) : warning LNK4099: 未找到 PDB“vc100.pdb”(使用“luad.lib(loslib.obj)”或在“E:\gitClone\daily_test\TestLua\CUsingLua\Debug\vc100.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>luad.lib(lparser.obj) : warning LNK4099: 未找到 PDB“vc100.pdb”(使用“luad.lib(lparser.obj)”或在“E:\gitClone\daily_test\TestLua\CUsingLua\Debug\vc100.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>luad.lib(lstate.obj) : warning LNK4099: 未找到 PDB“vc100.pdb”(使用“luad.lib(lstate.obj)”或在“E:\gitClone\daily_test\TestLua\CUsingLua\Debug\vc100.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>luad.lib(lstring.obj) : warning LNK4099: 未找到 PDB“vc100.pdb”(使用“luad.lib(lstring.obj)”或在“E:\gitClone\daily_test\TestLua\CUsingLua\Debug\vc100.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>luad.lib(lstrlib.obj) : warning LNK4099: 未找到 PDB“vc100.pdb”(使用“luad.lib(lstrlib.obj)”或在“E:\gitClone\daily_test\TestLua\CUsingLua\Debug\vc100.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>luad.lib(ltable.obj) : warning LNK4099: 未找到 PDB“vc100.pdb”(使用“luad.lib(ltable.obj)”或在“E:\gitClone\daily_test\TestLua\CUsingLua\Debug\vc100.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>luad.lib(ltablib.obj) : warning LNK4099: 未找到 PDB“vc100.pdb”(使用“luad.lib(ltablib.obj)”或在“E:\gitClone\daily_test\TestLua\CUsingLua\Debug\vc100.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>luad.lib(ltm.obj) : warning LNK4099: 未找到 PDB“vc100.pdb”(使用“luad.lib(ltm.obj)”或在“E:\gitClone\daily_test\TestLua\CUsingLua\Debug\vc100.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>luad.lib(lundump.obj) : warning LNK4099: 未找到 PDB“vc100.pdb”(使用“luad.lib(lundump.obj)”或在“E:\gitClone\daily_test\TestLua\CUsingLua\Debug\vc100.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>luad.lib(lutf8lib.obj) : warning LNK4099: 未找到 PDB“vc100.pdb”(使用“luad.lib(lutf8lib.obj)”或在“E:\gitClone\daily_test\TestLua\CUsingLua\Debug\vc100.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>luad.lib(lvm.obj) : warning LNK4099: 未找到 PDB“vc100.pdb”(使用“luad.lib(lvm.obj)”或在“E:\gitClone\daily_test\TestLua\CUsingLua\Debug\vc100.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>luad.lib(lzio.obj) : warning LNK4099: 未找到 PDB“vc100.pdb”(使用“luad.lib(lzio.obj)”或在“E:\gitClone\daily_test\TestLua\CUsingLua\Debug\vc100.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-         CUsingLua.vcxproj -> E:\gitClone\daily_test\TestLua\CUsingLua\Debug\CUsingLua.exe
-       Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"E:\gitClone\daily_test\TestLua\CUsingLua\Debug\CUsingLua.exe;#1" /manifest x64\Debug\CUsingLua.exe.intermediate.manifest
-       FinalizeBuildStatus:
-         正在删除文件“x64\Debug\CUsingLua.unsuccessfulbuild”。
-         正在对“x64\Debug\CUsingLua.lastbuildstate”执行 Touch 任务。
-     1>已完成生成项目“E:\gitClone\daily_test\TestLua\CUsingLua\CUsingLua.vcxproj”(build 个目标)的操作。
+﻿生成启动时间为 2020/4/30 10:11:59。
+     1>项目“E:\gitClone\daily_test\TestLua\CUsingLua\CUsingLua.vcxproj”在节点 2 上(clean 个目标)。
+     1>_PrepareForClean:
+         正在删除文件“x64\Debug\CUsingLua.lastbuildstate”。
+     1>已完成生成项目“E:\gitClone\daily_test\TestLua\CUsingLua\CUsingLua.vcxproj”(clean 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:00.86
+已用时间 00:00:00.07

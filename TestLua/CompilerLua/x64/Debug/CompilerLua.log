@@ -1,93 +1,9 @@
-﻿生成启动时间为 2019/7/6 15:50:43。
-     1>项目“E:\gitClone\daily_test\TestLua\CompilerLua\CompilerLua.vcxproj”在节点 2 上(rebuild 个目标)。
+﻿生成启动时间为 2020/4/30 10:12:02。
+     1>项目“E:\gitClone\daily_test\TestLua\CompilerLua\CompilerLua.vcxproj”在节点 2 上(clean 个目标)。
      1>_PrepareForClean:
          正在删除文件“x64\Debug\CompilerLua.lastbuildstate”。
-       InitializeBuildStatus:
-         正在创建“x64\Debug\CompilerLua.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
-       ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /Od /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc100.pdb" /Gd /TC /errorReport:prompt "D:\lua-5.3.5\lua-5.3.5\src\lapi.c" "D:\lua-5.3.5\lua-5.3.5\src\lauxlib.c" "D:\lua-5.3.5\lua-5.3.5\src\lbaselib.c" "D:\lua-5.3.5\lua-5.3.5\src\lbitlib.c" "D:\lua-5.3.5\lua-5.3.5\src\lcode.c" "D:\lua-5.3.5\lua-5.3.5\src\lcorolib.c" "D:\lua-5.3.5\lua-5.3.5\src\lctype.c" "D:\lua-5.3.5\lua-5.3.5\src\ldblib.c" "D:\lua-5.3.5\lua-5.3.5\src\ldebug.c" "D:\lua-5.3.5\lua-5.3.5\src\ldo.c" "D:\lua-5.3.5\lua-5.3.5\src\ldump.c" "D:\lua-5.3.5\lua-5.3.5\src\lfunc.c" "D:\lua-5.3.5\lua-5.3.5\src\lgc.c" "D:\lua-5.3.5\lua-5.3.5\src\linit.c" "D:\lua-5.3.5\lua-5.3.5\src\liolib.c" "D:\lua-5.3.5\lua-5.3.5\src\llex.c" "D:\lua-5.3.5\lua-5.3.5\src\lmathlib.c" "D:\lua-5.3.5\lua-5.3.5\src\lmem.c" "D:\lua-5.3.5\lua-5.3.5\src\loadlib.c" "D:\lua-5.3.5\lua-5.3.5\src\lobject.c" "D:\lua-5.3.5\lua-5.3.5\src\lopcodes.c" "D:\lua-5.3.5\lua-5.3.5\src\loslib.c" "D:\lua-5.3.5\lua-5.3.5\src\lparser.c" "D:\lua-5.3.5\lua-5.3.5\src\lstate.c" "D:\lua-5.3.5\lua-5.3.5\src\lstring.c" "D:\lua-5.3.5\lua-5.3.5\src\lstrlib.c" "D:\lua-5.3.5\lua-5.3.5\src\ltable.c" "D:\lua-5.3.5\lua-5.3.5\src\ltablib.c" "D:\lua-5.3.5\lua-5.3.5\src\ltm.c" "D:\lua-5.3.5\lua-5.3.5\src\lua.c" "D:\lua-5.3.5\lua-5.3.5\src\luac.c" "D:\lua-5.3.5\lua-5.3.5\src\lundump.c" "D:\lua-5.3.5\lua-5.3.5\src\lutf8lib.c" "D:\lua-5.3.5\lua-5.3.5\src\lvm.c" "D:\lua-5.3.5\lua-5.3.5\src\lzio.c"
-         lzio.c
-         lvm.c
-         lutf8lib.c
-         lundump.c
-         luac.c
-         lua.c
-         ltm.c
-         ltablib.c
-         ltable.c
-         lstrlib.c
-         lstring.c
-         lstate.c
-         lparser.c
-         loslib.c
-         lopcodes.c
-         lobject.c
-         loadlib.c
-         lmem.c
-         lmathlib.c
-         llex.c
-         Generating Code...
-         Compiling...
-         liolib.c
-         linit.c
-         lgc.c
-         lfunc.c
-         ldump.c
-         ldo.c
-         ldebug.c
-         ldblib.c
-         lctype.c
-         lcorolib.c
-         lcode.c
-         lbitlib.c
-         lbaselib.c
-         lauxlib.c
-         lapi.c
-         Generating Code...
-       Lib:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\Lib.exe /OUT:"E:\gitClone\daily_test\TestLua\CompilerLua\Debug\luad.lib" /NOLOGO x64\Debug\lapi.obj
-         x64\Debug\lauxlib.obj
-         x64\Debug\lbaselib.obj
-         x64\Debug\lbitlib.obj
-         x64\Debug\lcode.obj
-         x64\Debug\lcorolib.obj
-         x64\Debug\lctype.obj
-         x64\Debug\ldblib.obj
-         x64\Debug\ldebug.obj
-         x64\Debug\ldo.obj
-         x64\Debug\ldump.obj
-         x64\Debug\lfunc.obj
-         x64\Debug\lgc.obj
-         x64\Debug\linit.obj
-         x64\Debug\liolib.obj
-         x64\Debug\llex.obj
-         x64\Debug\lmathlib.obj
-         x64\Debug\lmem.obj
-         x64\Debug\loadlib.obj
-         x64\Debug\lobject.obj
-         x64\Debug\lopcodes.obj
-         x64\Debug\loslib.obj
-         x64\Debug\lparser.obj
-         x64\Debug\lstate.obj
-         x64\Debug\lstring.obj
-         x64\Debug\lstrlib.obj
-         x64\Debug\ltable.obj
-         x64\Debug\ltablib.obj
-         x64\Debug\ltm.obj
-         x64\Debug\lua.obj
-         x64\Debug\luac.obj
-         x64\Debug\lundump.obj
-         x64\Debug\lutf8lib.obj
-         x64\Debug\lvm.obj
-         x64\Debug\lzio.obj
-     1>lua.obj : warning LNK4006: main 已在 luac.obj 中定义；已忽略第二个定义
-     1>lua.obj : warning LNK4221: 此对象文件未定义任何之前未定义的公共符号，因此任何耗用此库的链接操作都不会使用此文件
-         CompilerLua.vcxproj -> E:\gitClone\daily_test\TestLua\CompilerLua\Debug\luad.lib
-       FinalizeBuildStatus:
-         正在删除文件“x64\Debug\CompilerLua.unsuccessfulbuild”。
-         正在对“x64\Debug\CompilerLua.lastbuildstate”执行 Touch 任务。
-     1>已完成生成项目“E:\gitClone\daily_test\TestLua\CompilerLua\CompilerLua.vcxproj”(rebuild 个目标)的操作。
+     1>已完成生成项目“E:\gitClone\daily_test\TestLua\CompilerLua\CompilerLua.vcxproj”(clean 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:05.40
+已用时间 00:00:00.07
