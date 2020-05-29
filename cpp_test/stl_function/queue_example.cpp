@@ -34,8 +34,12 @@ int main()
     // using mycomparison:
     typedef std::priority_queue<int, std::vector<int>, mycomparison> mypq_type;
 
-    mypq_type fourth;                    // less-than comparison
+    mypq_type fourth; // less-than comparison
+    for (auto a : myints)
+        fourth.push(a);
+    fourth.pop();
     mypq_type fifth(mycomparison(true)); // greater-than comparison
-
+    for (auto a : myints)
+        fifth.push(a);
     return 0;
 }
