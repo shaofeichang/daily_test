@@ -22,7 +22,9 @@
             "cStandard": "c11",
             "cppStandard": "c++17",
             "intelliSenseMode": "gcc-x64",
-            "windowsSdkVersion": "10.0.17134.0"
+            "windowsSdkVersion": "10.0.17134.0",
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json",
+            "configurationProvider": "ms-vscode.cmake-tools"
         }
     ],
     "version": 4
