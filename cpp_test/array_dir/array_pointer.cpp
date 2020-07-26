@@ -3,6 +3,7 @@ using namespace std;
 float *find(float p[][4], int m);
 float *find1(float (*p)[4], int m);
 float *find2(float *p, int m);
+float *find3 (float **p, int m);
 void sizeofaff(int a[10])
 {
     cout << sizeof(a) << endl;
@@ -86,13 +87,20 @@ int main()
     // pf = find2((float *)score, m); //返回为一维数组指针，指向一个学生成绩
     pf = find1(score, m);
     //pf = find(score, m);
-    for (i = 0; i < 4; i++)
-    {
+    printf("%0x\n", score);
+    pf = find3((float**)score , m);
+    for (i = 0; i < 4; i++) {
         cout << *(pf + i) << " ";
     }
     cout << endl;
     system("pause");
     return 0;
+}
+float *find3 (float **p, int m)
+{
+    printf("%0x\n", p);
+    int a = *((float *)p + 2 * 4 + 2) ;
+    return (*p + m);
 }
 float *find1(float (*p)[4], int m)
 {
