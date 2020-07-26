@@ -1,10 +1,21 @@
 #include<stdio.h>
-int test(int a, int b, int c)
+#include <stdlib.h>
+int comp(const void *num1, const void *num2)
 {
-    printf("%d %d %d \n",a, b,c );
+    if (*(int*)num1 == *(int*)num2) {
+        return *((int*)num1 + 1) - *((int*)num2 + 1);
+    } 
+    return *(int*)num1 - *(int*)num2;
 }
-void main()
+int main()
 {
-    test(1,2);
+    int num[6][2] = {{2,4},{4,1},{4,7},{4,2},{9,2},{9,1}};
+    qsort(num, 6, 8, comp);
+    for (size_t i = 0; i < 6; i++)
+    {
+        printf("%d %d\n", num[i][0], num[i][1]);
+    }
+    
     getchar();
+    return 0;
 }
