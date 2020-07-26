@@ -16,12 +16,12 @@ union A {
 int main()
 {
     {
-        int a = 0x01020304;
+        int a = 0x11223344;
         int *pi = &a;
         char *pa = (char*)&a;
-        cout << *pa << endl;
-        cout << *pa++ << endl;
-        cout << "HELLO" << endl;
+        cout << (int)*pa << endl;
+        cout << (int)(*(++pa)) << endl;
+        cout << endl;
     }
     {
         union {
@@ -45,12 +45,12 @@ int main()
     {
         A a;
         a.num = 0x12345678;
-        for (size_t i = 0; i < 4; i++)
-        {
-            cout << hex << a.ch[i] << "  ";
+        for (size_t i = 0; i < 4; i++) {
+            cout << hex << (int)a.ch[i] << "  ";
         }
         char ccc[4];
         memcpy(ccc, &a.num, 4);
+        int temp = *(int *)&ccc;
         cout << endl;
     }
     {
@@ -59,14 +59,13 @@ int main()
         cout << test1 + 2 << "  " << (*test1)++ << " " << endl;
         cout << test1 << endl;
         cout << test1 + 1 << endl;
-        cout << "sizeof" << sizeof(test1) << endl;
+        cout << "sizeof " << dec <<sizeof(test1) << endl;
         int *pint = test1;
         cout << *pint+1 << endl;
         cout << &test1 + 1 << endl;
         cout << "HELLOWORLD" << endl;
     }
     int test1[2][3] = {{1, 2, 3}, {3, 4, 5}};
-
     int(*ppp)[3] = test1;
     cout << " test1: " << test1 << "\t &test1: " << &test1 << "test1[0][0]: " << test1[0][0] << endl;
     cout << *(*test1 + 1) << "|" << **(test1 + 1) << "|" << test1 + 1 << endl;
