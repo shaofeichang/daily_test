@@ -12,7 +12,7 @@
     输出: 4 
     解释: 最长递增路径为 [1, 2, 6, 9]。
 */
-
+#include "../c_include.h"
 const int dirs[4][2] = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 int rows, columns;
 
