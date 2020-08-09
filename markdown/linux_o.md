@@ -1,8 +1,8 @@
-Linux静态库生成指南
+# Linux静态库生成指南
 Linux上的静态库，其实是目标文件的归档文件。
 在Linux上创建静态库的步骤如下：
 
-写源文件，通过 gcc -c xxx.c 生成目标文件。
+写源文件，通过 ```gcc -c xxx.c``` 生成目标文件。
 用 ar 归档目标文件，生成静态库。
 配合静态库，写一个使用静态库中函数的头文件。
 使用静态库时，在源码中包含对应的头文件，链接时记得链接自己的库。
@@ -86,7 +86,7 @@ gcc test.c -L. -lmylib
 
 通过makefile自动化
 上面的步骤很繁琐，还是写个简单的makefile吧，内容如下：
-
+```
 .PHONY: build test
 
 build: libmylib.a
@@ -104,6 +104,7 @@ test: a.out
 
 a.out: test.c
 	gcc test.c -L. -lmylib
+```
 makefile写好后，运行 make build 将会构建 libmylib.a， 运行 make test 将会生成链接 libmylib.a 的程序。
 
 如果你在 windows 上使用 mingw，和Linux下生成静态库的方法是一样的。
