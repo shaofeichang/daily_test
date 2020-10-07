@@ -15,8 +15,11 @@ int coinChange(vector<int>& coins, int amount)
     } 
     return (dp[amount] == amount + 1) ? -1 : dp[amount];
 }
+
 int main()
 {
+    int numa[3] = {1, 3, 2};
+    cout << 2[numa] <<endl;
     vector<int> num = {1,2,5};
     int amout = 11;
     int getNum = coinChange(num, amout);
