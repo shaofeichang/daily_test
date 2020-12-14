@@ -100,7 +100,7 @@ float *find3 (float **p, int m)
 {
     printf("%0x\n", p);
     int a = *((float *)p + 2 * 4 + 2) ;
-    return (*p + m);
+    return ((float *)p + m);
 }
 float *find1(float (*p)[4], int m)
 {
