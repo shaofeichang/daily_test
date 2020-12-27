@@ -62,6 +62,7 @@ int main()
         cout << test1 + 1 << endl;
         cout << "sizeof " << dec <<sizeof(test1) << endl;
         int *pint = test1;
+        cout << *pint++ << endl;
         cout << *pint+1 << endl;
         cout << &test1 + 1 << endl;
         cout << "HELLOWORLD" << endl;
@@ -100,7 +101,7 @@ float *find3 (float **p, int m)
 {
     printf("%0x\n", p);
     int a = *((float *)p + 2 * 4 + 2) ;
-    return ((float *)p + m);
+    return ((float *)p + 4 * m);
 }
 float *find1(float (*p)[4], int m)
 {
